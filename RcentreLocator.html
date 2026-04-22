@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>3RConnect | RcentreLocator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="http://webthemez.com" />
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+     
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+    </head>
+    <body>
+    <div id="wrapper">
+        <!-- start header -->
+    <!-- NavBar Section -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homepage.html"><img src="img/logo.jpg" alt="logo" style="width: 50px;"></a>
+                    
+                </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li class="active"><a href="RcentreLocator.html">Recycle Center</a></li>
+                    <li><a href="resource_tracking.html">Resource Tracking</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+
+                    <!-- Add a subheader for Forums -->
+                    <!-- <li class="active"> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="forumsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Community <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="forumsDropdown">
+                            <a class="dropdown-item" href="forums.html">Forum</a>
+                            <a class="dropdown-item" href="posts.html">Posts</a>
+                            <a class="dropdown-item" href="details.html">Details</a>
+                        </div>
+                    </li>
+                <!-- </li> -->
+                    <!-- End of subheader for Forums -->
+
+                     <!-- Updated Dropdown Menu for Educational Resources -->
+					 <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Educational Resources <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="educationDropdown">
+                            <a class="dropdown-item" href="article.html">Article</a>
+                            <a class="dropdown-item" href="video.html">Video</a>
+                            <a class="dropdown-item" href="infographic.html">Infographic</a>
+                        </div>
+                    </li>
+					<li><a href="UserProfile.html"><img src="img/user profile.jpg" alt="Profile Logo" width="30" height="30"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->
+
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="pageTitle">Recycle Center</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Recycling Centre Locator Module -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3>Recycling Centre Locator</h3>
+                                <label for="stateSelector">Select State:</label>
+                                <select id="stateSelector" name="stateSelector" onchange="showRecyclingCentersByState()">
+                                    <option value="default">State</option>
+                                    <option value="Johor">Johor</option>
+                                    <option value="Kedah">Kedah</option>
+                                    <option value="Kelantan">Kelantan</option>
+                                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                    <option value="Pulau Pinang">Pulau Pinang</option>
+                                    <option value="Melaka">Melaka</option>
+                                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                    <option value="Pahang">Pahang</option>
+                                    <option value="Perak">Perak</option>
+                                    <option value="Perlis">Perlis</option>
+                                    <option value="Sabah">Sabah</option>
+                                    <option value="Sarawak">Sarawak</option>
+                                    <option value="Selangor">Selangor</option>
+                                    <option value="Terengganu">Terengganu</option>
+                                </select>
+
+                                <label for="materialSelector">Select Material:</label>
+                                <select id="materialSelector" name="materialSelector" onchange="showRecyclingCentersByStateAndMaterialAndRating()">
+                                    <option value="all">All</option>
+                                    <option value="plastic">Plastic</option>
+                                    <option value="paper">Paper</option>
+                                    <option value="newspaper">newspaper</option>
+                                    <option value="clothes">Clothes</option>
+                                    <option value="metal">Metal</option>
+                                    <option value="aluminium">Aluminium</option>
+                                    <option value="sponge">Sponge</option>
+                                    <option value="cooking oil">Cooking Oil</option>
+                                    <option value="pallet">Pallet</option>
+                                    <option value="wire/cable">Wire/Cable</option>
+                                    <option value="e-waste">E-Waste</option>
+                                    <option value="machineries">Machineries</option>
+                                    <option value="scrap car">Scrap car</option>
+                                    <option value="tyre">Tyre</option>
+
+                                </select>
+        
+                                <label for="ratingSelector">Select Rating:</label>
+                                <select id="ratingSelector" name="ratingSelector" onchange="showRecyclingCentersByStateAndMaterialAndRating()">
+                                    <option value="none">None</option>
+                                    <option value="5">5</option>
+                                    <option value="4">4</option>
+                                    <option value="3">3</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                </select>
+                                
+                                
+                                
+
+                                <div id="recyclingCentersList" class="recycling-center-item">
+                            </div>
+                        </div>
+
+                        <hr class="margin-bottom-50">
+
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="widget">
+                            <h5 class="widgetheading">Our Contact</h5>
+                                <i class="icon-phone"></i> Phone: (+60) 4-3636742 <br>
+                                <i class="icon-envelope-alt"></i> Email: 3rconnect@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sub-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="copyright">
+                                <p>
+                                    <span>&copy; 3RConnect 2023 All right reserved.</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            </footer>
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/portfolio/jquery.quicksand.js"></script>
+    <script src="js/portfolio/setting.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/RCentreLocator.js"></script>
+  </body>
+
+</html>

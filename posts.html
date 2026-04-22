@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>3RConnect | Community - Posts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="http://webthemez.com" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/community.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <div id="wrapper">
+
+    <!-- start header -->
+<!-- NavBar Section -->
+<header>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="homepage.html"><img src="img/logo.jpg" alt="logo" style="width: 45px;"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="RcentreLocator.html">Recycle Center</a></li>
+                    <li><a href="resource_tracking.html">Resource Tracking</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+
+                    <!-- Add a subheader for Forums -->
+                    <!-- <li class="active"> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="forumsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Community <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="forumsDropdown">
+                            <a class="dropdown-item" href="forums.html">Forum</a>
+                            <a class="dropdown-item" href="posts.html">Posts</a>
+                            <a class="dropdown-item" href="details.html">Details</a>
+                        </div>
+                    </li>
+                <!-- </li> -->
+                    <!-- End of subheader for Forums -->
+
+                     <!-- Updated Dropdown Menu for Educational Resources -->
+					 <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Educational Resources <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="educationDropdown">
+                            <a class="dropdown-item" href="article.html">Article</a>
+                            <a class="dropdown-item" href="video.html">Video</a>
+                            <a class="dropdown-item" href="infographic.html">Infographic</a>
+                        </div>
+                    </li>
+					<li><a href="UserProfile.html"><img src="img/user profile.jpg" alt="Profile Logo" width="30" height="30"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->
+    
+    
+        <section id="inner-headline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="pageTitle">Forum</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+        <!-- SearchBox Section -->
+        <div class="search-box">
+            <div>
+                <select id="searchType">
+                    <option value="Everything">Everything</option>
+                    <option value="Titles">Titles</option>
+                    <option value="Descriptions">Descriptions</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="performSearch()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+        
+        <div class="container">
+
+        <!--Navigation-->
+        <div class="navigate">
+            <span><a href="">MyForum - Forums</a> >> <a href="">random subforum</a></span>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary" onclick="openNewPostModal()">Create Post</button> -->
+
+        <!-- Add this div to hold posts -->
+        <div id="postsContainer" class="posts-table">
+          
+
+        <!-- Modal for New Post -->
+        <!-- <div id="newPostModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Create a New Post</h2>
+                <form id="newPostForm">
+                    <label for="postTitle">Title:</label>
+                    <input type="text" id="postTitle" name="postTitle" required>
+
+                    <label for="postContent">Content:</label>
+                    <textarea id="postContent" name="postContent" required></textarea>
+
+                    <button type="button" onclick="createNewPost()">Create Post</button>
+                </form>
+            </div>
+        </div> -->
+
+        <!-- New Post Modal -->
+  <!-- <div id="newPostModal" style="display: none;">
+    <form onsubmit="createNewPost(); return false;">
+      <label for="postTitle">Title:</label>
+      <input type="text" id="postTitle" required>
+      <br>
+      <label for="postContent">Content:</label>
+      <textarea id="postContent" required></textarea>
+      <br>
+      <button type="submit">Submit</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div> -->
+
+  <!-- Bootstrap Modal -->
+  <div class="modal" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="createPostModalLabel">Create a New Post</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Add your form elements for creating a post -->
+              <form id="newPostForm">
+                  <div class="form-group">
+                      <label for="postTitle">Title</label>
+                      <input type="text" class="form-control" id="postTitle" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="postContent">Content</label>
+                      <textarea class="form-control" id="postContent" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+        <!--Display posts table-->
+        <div class="posts-table"id="postsTable">
+            <div class="table-head">
+                <div class="status">Status</div>
+                <div class="subjects">Subjects</div>
+                <div class="replies">Replies/Views</div>
+                <div class="last-reply">Last Reply</div>
+            </div>
+
+            <!-- Post Row 1 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Tips for Sustainable Home Gardens</a>
+                    <br>
+                    <span>Started by <b><a href="#">GreenThumb</a></b>.</span>
+                </div>
+                <div class="replies">
+                    5 replies <br> 200 views
+                </div>
+                <div class="last-reply">
+                    Feb 10, 2022 <br>By <b><a href="#">EcoEnthusiast</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 2 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Upcycling Furniture Ideas</a>
+                    <br>
+                    <span>Started by <b><a href="#">RecycleQueen</a></b>.</span>
+                </div>
+                <div class="replies">
+                    8 replies <br> 180 views
+                </div>
+                <div class="last-reply">
+                    Feb 8, 2022 <br>By <b><a href="#">UpcycleMaster</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 3 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Solar Energy Installation Guide</a>
+                    <br>
+                    <span>Started by <b><a href="#">SolarExplorer</a></b>.</span>
+                </div>
+                <div class="replies">
+                    12 replies <br> 250 views
+                </div>
+                <div class="last-reply">
+                    Feb 5, 2022 <br>By <b><a href="#">GreenTechie</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 4 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Zero-Waste Kitchen Tips</a>
+                    <br>
+                    <span>Started by <b><a href="#">EcoChef</a></b>.</span>
+                </div>
+                <div class="replies">
+                    15 replies <br> 300 views
+                </div>
+                <div class="last-reply">
+                    Feb 3, 2022 <br>By <b><a href="#">SustainableCook</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 5 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Bike Commuting Benefits</a>
+                    <br>
+                    <span>Started by <b><a href="#">EcoCyclist</a></b>.</span>
+                </div>
+                <div class="replies">
+                    10 replies <br> 180 views
+                </div>
+                <div class="last-reply">
+                    Jan 28, 2022 <br>By <b><a href="#">GreenRider</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 6 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="details.html">DIY Eco-Friendly Cleaning Products</a>
+                    <br>
+                    <span>Started by <b><a href="#">CleanLiving</a></b>.</span>
+                </div>
+                <div class="replies">
+                    20 replies <br> 250 views
+                </div>
+                <div class="last-reply">
+                    Jan 25, 2022 <br>By <b><a href="#">GreenHomeMaker</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 7 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-rocket"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Renewable Energy Sources Discussion</a>
+                    <br>
+                    <span>Started by <b><a href="#">RenewableEnergyFan</a></b>.</span>
+                </div>
+                <div class="replies">
+                    18 replies <br> 280 views
+                </div>
+                <div class="last-reply">
+                    Jan 20, 2022 <br>By <b><a href="#">SustainableTechie</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 8 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Sustainable Fashion Trends</a>
+                    <br>
+                    <span>Started by <b><a href="#">EcoFashionista</a></b>.</span>
+                </div>
+                <div class="replies">
+                    22 replies <br> 320 views
+                </div>
+                <div class="last-reply">
+                    Jan 15, 2022 <br>By <b><a href="#">FashionGreen</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 9 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-book"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Natural Home Decor Ideas</a>
+                    <br>
+                    <span>Started by <b><a href="#">EcoDecorator</a></b>.</span>
+                </div>
+                <div class="replies">
+                    25 replies <br> 350 views
+                </div>
+                <div class="last-reply">
+                    Jan 10, 2022 <br>By <b><a href="#">GreenLivingSpaces</a></b>
+                </div>
+            </div>
+
+            <!-- Post Row 10 -->
+            <div class="table-row">
+                <div class="status"><i class="fa fa-fire"></i></div>
+                <div class="subjects">
+                    <a href="details.html">Urban Gardening Tips</a>
+                    <br>
+                    <span>Started by <b><a href="#">CityGreener</a></b>.</span>
+                </div>
+                <div class="replies">
+                    30 replies <br> 400 views
+                </div>
+                <div class="last-reply">
+                    Jan 5, 2022 <br>By <b><a href="#">GreenThumbCity</a></b>
+                </div>
+            </div>
+
+            <!--ends here-->
+        <!-- </div> -->
+        
+
+        <!-- </div> -->
+        </div>
+        <!--Pagination starts-->
+            <div class="pagination">
+                pages: <a href="">1</a><a href="">2</a><a href="">3</a>
+            </div>
+        <!--pagination ends-->
+    </div>
+</div>
+
+    <div class="note">
+        <span><i class="fa fa-frown-o"></i>&nbsp; 0 Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-book"></i>&nbsp; Low Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-fire"></i>&nbsp; Popular Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-rocket"></i>&nbsp; High Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+        <span><i class="fa fa-lock"></i>&nbsp; Closed Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
+    </div>
+
+    
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Our Contact</h5>
+                            <i class="icon-phone"></i> Phone: (+60) 4-3636742 <br>
+                            <i class="icon-envelope-alt"></i> Email: 3rconnect@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span>&copy; 3RConnect 2023 All right reserved.</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </footer>
+
+    </div>
+
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+    <!-- javascript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster --> 
+
+    <!-- Add Bootstrap and jQuery scripts -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/portfolio/jquery.quicksand.js"></script>
+    <script src="js/portfolio/setting.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-storage-compat.js"></script>
+
+    <script src="js/community.js"></script>
+</body>
+
+</html>

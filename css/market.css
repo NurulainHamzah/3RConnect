@@ -1,0 +1,239 @@
+/* Marketplace Styles */
+.post-form {
+    transition: all 0.3s ease;
+    border: 2px solid hsl(180, 2%, 28%);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto; /* Center the form */
+    max-width: 500px; /* Set maximum width for the form */
+}
+.post-form,
+.posts,
+.filter-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.post-form h2,
+.posts h2,
+.material h3,
+.materials-heading {
+    color: #14987F;
+}
+
+.post-form label,
+.post-form textarea,
+.post-form input,
+.posts label,
+.posts h3,
+.posts p,
+.filter-form, .posts {
+    max-width: 800px; /* Set maximum width for the medium-sized box */
+    margin: 0 auto; /* Center the box */
+}
+.posts {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-form textarea,
+.post-form input,
+.posts button,
+.filter-form input,
+.filter-form button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.post-form button,
+.posts button,
+.filter-form button {
+    background-color: #14987F;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-form button:hover,
+.posts button:hover,
+.filter-form button:hover {
+    background-color: #136766;
+}
+
+.material {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(90% - 20px); /* Adjust the width as needed */
+    margin-right: 20px; /* Add some margin to separate posts */
+    margin-bottom: 20px; /* Add margin to create a new row of posts */
+}
+
+.material button {
+    background-color: #14987F;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.material button:hover {
+    background-color: #136766;
+}
+
+.material-list .material {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.material-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the posts horizontally */
+    gap: 20px;
+}
+
+.material-list .material:hover {
+    transform: scale(1.05);
+}
+
+/* Centered media styles */
+.centered-media {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.media-item {
+    width: 48%; /* Adjust this value based on your preference */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.centered-media img,
+.centered-media video {
+    max-width: 100%; /* Adjust this value based on your preference */
+    width: 100%; /* Ensure the media item takes up the available width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.centered-media img {
+    transition: transform 0.3s ease;
+}
+
+.centered-media:hover img {
+    transform: scale(1.1);
+}
+
+/* Container for image and video in posted materials */
+.material .media-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Medium size for media items */
+.media-item {
+    width: 48%; /* Adjust the width based on your design preference */
+    max-height: 200px; /* Set a maximum height */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Centered media styles */
+.centered-media img,
+.centered-media video {
+    max-width: 100%;
+    width: 100%;
+    height: auto; /* Allow height to adjust based on aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Updated Filter Function Styles */
+
+.filter-form {
+    background-color: #fff; /* White background color */
+    padding: 10px; /* Adjusted padding for the filter form */
+    border-radius: 5px; /* Border radius for a rounded appearance */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.filter-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.filter-form select,
+.filter-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.filter-form button {
+    background-color: #14987F; /* Matching the color of other buttons */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form button:hover {
+    background-color: #136766; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for filter form */
+@media (min-width: 768px) {
+    .filter-form {
+        max-width: 200px; /* Adjusted maximum width for larger screens */
+        margin: 0; /* No margin to place it on the left */
+        float: inline-end; /* Float the filter form to the left */
+        margin-right: 15px; /* Add some margin to separate from posts */
+    }
+}
+
+/* Hide the outer box border */
+.posts,
+.material {
+    border: none;
+}
+
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fullscreen-container img {
+    max-width: 100%;
+    max-height: 100%;
+}

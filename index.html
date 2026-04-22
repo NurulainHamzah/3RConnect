@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="Login.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Change font family to Comic Sans MS */
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        .title {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 0;
+            color: #fff; /* White text color */
+            font-size: 36px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 3px; /* Spacing between letters */
+            animation: rainbow 3s linear infinite; /* Rainbow animation */
+        }
+
+        @keyframes rainbow {
+            20% { color: #f7ead1; } /* Orange */
+            20% { color: #f4f495; } /* Yellow */
+            10% { color: #9beb9b; } /* Green */
+        }
+
+        .form {
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        .trademark {
+            text-align: center;
+            font-style: italic;
+            top: 0;
+            left: 0;
+            color: #ffffff; /* Adjust color as needed */
+            margin-top: 0px; /* Adjust margin for spacing */
+        }
+    </style>
+    <!-- Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="Login.js" defer></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Welcome to 3R Connect</h1>
+    </div>
+        <!-- Trademark -->
+        <div class="trademark">
+            <!-- <p>3R Connect™ - Your Gateway to Responsible Relationships and Resourcefulness</p> -->
+        </div>
+        
+    <div class="form">
+        <!-- Name -->
+        <div class="name">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name">
+        </div>
+        <!-- Email -->
+        <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Write your email">
+        </div>
+        <!-- Password -->
+        <div class="pass">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="password">
+            <p>Password must contain at least one number, 
+               one special character, 
+               one lowercase letter, 
+               one uppercase letter, 
+               and be at least 8 characters long.</p>
+        </div>
+
+        <!-- Sign Up button -->
+        <button id="submit-btn" onclick="signUp()">Sign Up</button>
+        <!-- Sign In option -->
+        <p>Already have an account ?</p>
+        <span><a href="signIn.html">Sign In</a></span>
+    </div>
+
+</body>
+</html>

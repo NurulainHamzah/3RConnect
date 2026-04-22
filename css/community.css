@@ -1,0 +1,392 @@
+
+h1{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+
+/* ########################################### */
+/*           Forums.html                       */
+/* ########################################### */
+
+#threadsContainer {
+    margin-top: 20px;
+}
+
+.thread-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.thread-card h4 {
+    margin-bottom: 0;
+}
+
+.thread-card button {
+    margin-right: 5px;
+}
+
+#newThreadModal {
+    display: none;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 10px;
+}
+
+.subforum{
+    margin-top:20px;
+}
+
+.subforum-title{
+    background-color: #0E987E;
+    padding: 1px;
+    border-radius: 5px;
+    margin:4px;
+}
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-row.hide {
+    display: none; /* Hide posts when they have the 'hide' class */
+}
+
+.subforum-column{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+	background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i{
+    font-size: 45px;
+}
+
+.subforum-devider{
+    display: none;   
+}
+
+
+/* For the smartphones */
+@media screen and (max-width: 460px) {
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+
+    .subforum-devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    }
+
+    
+
+  }
+
+/* For the tablets */
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .subforum-icon i{
+        font-size: 35px;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+  }
+
+
+  /* Search Box styles */
+  .search-box{
+    border: solid 1px #046E5A;
+    margin-top: 20px;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    box-shadow:1px 2px 3px #046E5A;
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#fff;
+    color:#000000;
+}
+
+.search-box button:hover{
+	background-color: #007bff;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }    
+
+}
+
+/* forum info Styling */
+.forum-info{
+	margin-top: 20px;
+    padding: 20px;
+	background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.chart{
+    font-size:20px;
+    font-weight:bold;
+}
+
+
+/* ########################################### */
+/*            posts.html                       */
+/* ########################################### */
+
+/* posts table's head  */
+.table-head{
+    display: flex;
+    color: #ffffff;
+}
+
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: #0E987E;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+    display: flex;
+}
+
+.table-row.hide {
+    display: none; /* Hide posts when they have the 'hide' class */
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #000000;
+}
+
+.navigate a:hover{
+    color:#007bff;
+    font-weight: bolder;
+}
+
+/* Pagination*/
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #000000;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #dee2e6;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+    color:#007bff;
+}
+
+.note{
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    /* background-color:#111314; */
+    padding: 20px;
+    display: block;
+}
+
+.note span{
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+
+/* ########################################### */
+/*            detail.html                      */
+/* ########################################### */
+
+.head{
+    color: #FFFFFF;
+    display: flex;
+    background-color: #0E987E;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+}
+
+.content{
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.body .authors .username{
+    font-size: 20px;
+}
+
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+
+.body .content .comment button{
+    border:none;
+    padding:10px;
+    font-weight: bolder;
+    box-shadow: 4px 6px #fff;
+    cursor: pointer;
+    float: right;
+}
+
+/* comment section */
+.comment-area{
+    margin-bottom:50px;
+}
+
+.comment-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover{
+    border: solid 1px #000000;
+}
+
+
+
+
+
+
+
+

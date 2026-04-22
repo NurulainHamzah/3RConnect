@@ -1,0 +1,76 @@
+Pulau Pinang
+
+name: "MM Century Sdn Bhd",
+                date: "(Jan 2014)",
+                address: "Plot 154(b) Lorong Perindustrian Bukit Minyak, Taman Perindustrian Bukit Minyak, 14000 Bukit Mertajam, Penang.",
+                phone: "+6017 476 8984",
+                email: "admin@mmcentury.my",
+                coordinates: "GPS: 5.29589, 100.45797",
+                services: [
+                    "Total Waste Management",
+                    "General Waste (Paper, Plastic, etc.)",
+                    "Scheduled Waste",
+                    "Arm Roll Bin Services",
+                    "Ferrous & Non Ferrous Metals",
+                    "Moving & Cleaning Services",
+                    "Documents Destruction"
+                ]
+            },
+            {
+                name: "Kamatchi Amman Trading",
+                address: "No. 6579, Jalan Pengkalan Bukit Tengah, 14000 Bukit Mertajam, Penang.",
+                phone: "Phone: 017 456 5446, 019 421 7046",
+                businessType: "Type of Business: We are buying all types of ferrous and Non-ferrous metals, Plastics (HDPE, LDPE, PU, PP, PS, ABS, PVC, POLYCARBONATE, etc), scrap electronic pcb, waste solder, solder dross, used solder waste, Lithium ion batteries, precious metals and pv ribbons. Call us to change your trash into cash. Our experts help you to recycle your trash and save landfill",
+                contactPerson: "Contact: Mr Muralitharan",
+                email: "Email: money4business4u@gmail.com",
+                coordinates: "GPS Coordinates: 5.347067, 100.433914"
+
+Lns Metal
+451-B Beach Street
+10300 Penang.
+Phone: 010 566 4575
+Contact: Ramakrishna
+Email: Insmetalindustry@gmail.com
+Remarks: Located next to LY Motor Shop, near to Sia Boey Market.
+Operation Hours: Mon-Sat 9:00 am to 6:45 pm
+Closed on Sundays and public holidays.
+
+Sor Siew Choon Trading 
+Jalan Paya Terubong
+11060 Paya Terubong, Penang
+Phone: +60-4-829 1497
+
+Eco Store Global Sdn Bhd
+Lot 794 Jalan Bukit Tengah
+14000 Perai, Penang
+Phone: 012 390 6690
+Website: ecostore.weebly.com
+
+Eden Handicap Recycling Unit
+102-E Lengkok Kampung Jawa 2
+Kawasan MIEL
+11900 Bayan Lepas, Penang
+Phone: +60-4-644 2912
+
+Embatech Sdn Bhd
+1, Lintang Beringin 8
+Diamond Valley Industrial Park 2
+Jalan Permatang Damar Laut
+11960 Batu Maung, Penang
+Phone: +60-4-626 5523
+
+Excellent Recycling Centre
+176 Hutton Lane
+10050 George Town, Penang
+Phone: +60-4-226 1032
+
+Green Synergy Trading
+Lot 14 Mukim 3, Jalan Kubang Semang
+14400 Bukit Mertajam, Penang
+Phone: +60-4-521 1460
+
+Sunnyjaya Plastic Industries
+Lorong Perindustrian Bukit Minyak 14
+Taman Perindustrian Bukit Minyak
+14100 Bukit Mertajam, Penang
+Phone: +60-4-507 3597

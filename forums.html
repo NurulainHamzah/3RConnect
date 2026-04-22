@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>3RConnect | Community</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="http://webthemez.com" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/jcarousel.css" rel="stylesheet" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/community.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+<!-- start header -->
+<!-- NavBar Section -->
+<header>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="homepage.html"><img src="img/logo.jpg" alt="logo" style="width: 45px;"></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="RcentreLocator.html">Recycle Center</a></li>
+                    <li><a href="resource_tracking.html">Resource Tracking</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+
+                    <!-- Add a subheader for Forums -->
+                    <!-- <li class="active"> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="forumsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Community <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="forumsDropdown">
+                            <a class="dropdown-item" href="forums.html">Forum</a>
+                            <a class="dropdown-item" href="posts.html">Posts</a>
+                            <a class="dropdown-item" href="details.html">Details</a>
+                        </div>
+                    </li>
+                <!-- </li> -->
+                    <!-- End of subheader for Forums -->
+
+                     <!-- Updated Dropdown Menu for Educational Resources -->
+					 <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Educational Resources <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="educationDropdown">
+                            <a class="dropdown-item" href="article.html">Article</a>
+                            <a class="dropdown-item" href="video.html">Video</a>
+                            <a class="dropdown-item" href="infographic.html">Infographic</a>
+                        </div>
+                    </li>
+					<li><a href="UserProfile.html"><img src="img/user profile.jpg" alt="Profile Logo" width="30" height="30"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header -->
+
+	<section id="inner-headline">
+	    <div class="container">
+		    <div class="row">
+			    <div class="col-lg-12">
+				    <h2 class="pageTitle">Forum</h2>
+			    </div>
+		    </div>
+	    </div>
+	</section>
+</div>
+
+<!-- SearchBox Section -->
+<div class="search-box">
+    <div>
+        <select id="searchType">
+            <option value="Everything">Everything</option>
+            <option value="Titles">Titles</option>
+            <option value="Descriptions">Descriptions</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="performSearch()"><i class="fa fa-search"></i></button>
+    </div>
+</div>
+
+
+<div class="container">
+    <!--Navigation-->
+    <div class="navigate">
+        <span><a href="">Forum - Topics</a> >> <a href="">random subforum</a></span>
+    </div>
+    
+
+<!-- Container for displaying threads -->
+<!-- <div class="container">
+    <div id="threadsContainer" class="row mb-4"></div> -->
+
+    <!-- Add New Thread Card -->
+    <!-- <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add New Thread</h5>
+            <button class="btn btn-primary" onclick="openNewThreadModal()">Add New Thread</button>
+        </div>
+    </div>
+</div> -->
+
+<!-- New Thread Modal -->
+<!-- <div class="modal" id="newThreadModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Thread</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeNewThreadModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="newThreadForm">
+                    <div class="form-group">
+                        <label for="threadTitle">Thread Title:</label>
+                        <input type="text" class="form-control" id="threadTitle" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Container for displaying threads -->
+<!-- <div class="container subforum">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="subforum-title">Your Subforum Title</h2>
+        </div>
+    </div>
+    <div id="threadsContainer" class="row mb-4"></div> -->
+
+    <!-- Add New Thread Card -->
+    <!-- <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add New Thread</h5>
+            <button class="btn btn-primary" onclick="openNewThreadModal()">Add New Thread</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="subforum">
+    <!-- <div class="subforum-title">
+        <h1>Reduce, Reuse, Recycle</h1>
+    </div> -->
+
+<!-- Container for displaying threads -->
+<div class=" subforum">
+    <!-- <div class="row mb-4"> -->
+        <!-- <div class="col-12"> -->
+            <div class="subforum">
+            <!-- <h1 class="subforum-title">My Forum</h1> -->
+            <div class="subforum-title">
+                <h1>My Forum</h1>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div id="threadsContainer" class="row mb-4">
+        <!-- Threads will be dynamically added here -->
+    </div>
+
+        <!-- Sample Thread -->
+        <!-- <div class="row mb-4">
+            <div class="col-12 subforum-row">
+                <div class="subforum-column center">
+                    <div class="subforum-icon">
+                        <i class="fa fa-comment"></i>
+                    </div>
+                </div>
+                <div class="subforum-column">
+                    <h5 class="card-title">Thread Title</h5>
+                    <p class="card-text">Thread Content</p>
+                </div>
+                <div class="subforum-column center">
+                    <button class="btn btn-danger">Delete</button>
+                </div>
+                <div class="subforum-column center">
+                    <button class="btn btn-warning">Edit</button>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- Add New Thread Card -->
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Add New Thread</h5>
+            <button class="btn btn-primary" onclick="openNewThreadModal()">Add New Thread</button>
+        </div>
+    </div>
+</div>
+
+<!-- New Thread Modal -->
+<div class="modal" id="newThreadModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Thread</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeNewThreadModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="newThreadForm">
+                    <div class="form-group">
+                        <label for="threadTitle">Thread Title:</label>
+                        <input type="text" class="form-control" id="threadTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="threadDescription">Thread Description:</label>
+                        <textarea class="form-control" id="threadDescription" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        <!-- Main Forum: Reduce, Reuse, Recycle -->
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Reduce, Reuse, Recycle</h1>
+            </div>
+            <!-- Subforums under Reduce, Reuse, Recycle -->
+            <!-- Subforum: Tips for Sustainable Living -->
+            <div class="subforum-row">
+                <!-- Add your custom icon or use an existing one -->
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-leaf center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Minimizing Household Waste</a></h4>
+                    <p>Share tips and tricks on reducing household waste and adopting a sustainable lifestyle.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>25 Posts | 10 Topics</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="posts.html">Last post</a></b> by <a href="#">GreenLiving</a> <br>on <small>10 Feb 2022</small>
+                </div>
+            </div>
+
+            <!-- Subforum: Creative Upcycling Projects -->
+    <div class="subforum-row">
+        <div class="subforum-icon subforum-column center">
+            <i class="fa fa-wrench center"></i>
+        </div>
+        <div class="subforum-description subforum-column">
+            <h4><a href="posts.html">DIY Upcycling Inspiration</a></h4>
+            <p>Showcase and discuss creative DIY projects that repurpose items for a sustainable and artistic touch.</p>
+        </div>
+        <div class="subforum-stats subforum-column center">
+            <span>30 Posts | 15 Topics</span>
+        </div>
+        <div class="subforum-info subforum-column">
+            <b><a href="posts.html">Last post</a></b> by <a href="#">UpcycleArtisan</a> <br>on <small>12 Feb 2022</small>
+        </div>
+    </div>
+
+    <!-- Subforum: Responsible Recycling Practices -->
+    <div class="subforum-row">
+        <div class="subforum-icon subforum-column center">
+            <i class="fa fa-home center"></i>
+        </div>
+        <div class="subforum-description subforum-column">
+            <h4><a href="posts.html">Mastering Recycling at Home</a></h4>
+            <p>Discuss the ins and outs of recycling at home, understanding symbols, and maximizing your recycling efforts.</p>
+        </div>
+        <div class="subforum-stats subforum-column center">
+            <span>28 Posts | 12 Topics</span>
+        </div>
+        <div class="subforum-info subforum-column">
+            <b><a href="posts.html">Last post</a></b> by <a href="#">EcoRecycler</a> <br>on <small>15 Feb 2022</small>
+        </div>
+    </div>
+</div>
+
+<!-- Main Forum: Ethical Living -->
+    <!-- <div class="subforum">
+        <div class="subforum-title">
+            <h1>Ethical Living</h1>
+        </div> -->
+        <!-- Subforums under Ethical Living -->
+        <!-- Subforum: Ethical Resource Management -->
+        <!-- <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-globe center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="topic1_posts.html">Reducing Waste in Daily Life</a></h4>
+                <p>Discuss strategies and share tips on minimizing waste in our daily routines. Let's explore sustainable living together!</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>42 Posts | 18 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">EcoWarrior</a> <br>on <small>12 Jan 2022</small>
+            </div>
+        </div> -->
+
+        <!-- Subforum: Eco-Friendly Transportation -->
+        <!-- <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-thumbs-up center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="#">Cycling for a Greener World</a></h4>
+                <p>Share experiences and tips on using bicycles and other eco-friendly transportation methods. Let's pedal our way to a cleaner environment!</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>30 Posts | 15 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">GreenCommute</a> <br>on <small>15 Jan 2022</small>
+            </div>
+        </div> -->
+
+        <!-- Subforum: Sustainable Gardening -->
+        <!-- <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-leaf center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="#">Grow Your Own: Gardening Tips</a></h4>
+                <p>Discuss sustainable gardening practices, share tips on organic farming, and explore ways to grow your own food at home.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>25 Posts | 10 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">GreenThumb</a> <br>on <small>18 Jan 2022</small>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Main Forum: Renewable Energy -->
+    <div class="subforum">
+        <div class="subforum-title">
+            <h1>Renewable Energy</h1>
+        </div>
+        <!-- Subforums under Renewable Energy -->
+        <!-- Subforum: Solar Power -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-sun-o center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Harnessing Solar Power</a></h4>
+                <p>Explore the possibilities of solar energy and other renewable sources. Share knowledge and discuss the latest advancements in sustainable energy solutions.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>28 Posts | 14 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">SolarEnthusiast</a> <br>on <small>20 Jan 2022</small>
+            </div>
+        </div>
+
+        <!-- Subforum: Wind Power -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-flag center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Harnessing Wind Energy</a></h4>
+                <p>Discuss the utilization of wind power for sustainable energy. Share experiences and explore the potential of wind turbines.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>22 Posts | 11 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">WindAdvocate</a> <br>on <small>23 Jan 2022</small>
+            </div>
+        </div>
+
+        <!-- Subforum: Green Innovations -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-lightbulb-o center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Innovations for a Greener Tomorrow</a></h4>
+                <p>Explore and discuss the latest green technologies and innovations driving sustainability. Share ideas for a better, eco-friendly future.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>35 Posts | 18 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">GreenInnovator</a> <br>on <small>25 Jan 2022</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Forum: Sustainable Living Tips -->
+    <div class="subforum">
+        <div class="subforum-title">
+            <h1>Sustainable Living Tips</h1>
+        </div>
+        <!-- Subforums under Sustainable Living Tips -->
+        <!-- Subforum: Eco-Friendly Fashion -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-shopping-cart center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Sustainable Fashion Choices</a></h4>
+                <p>Discuss eco-friendly and sustainable fashion choices. Share tips on ethical shopping and reducing the environmental impact of your wardrobe.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>32 Posts | 16 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">EcoFashionista</a> <br>on <small>28 Jan 2022</small>
+            </div>
+        </div>
+
+        <!-- Subforum: Green Travel -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-plane center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Traveling Sustainably</a></h4>
+                <p>Share experiences and tips on eco-friendly travel. Explore destinations, transportation choices, and practices for a sustainable travel lifestyle.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>26 Posts | 13 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">GreenExplorer</a> <br>on <small>30 Jan 2022</small>
+            </div>
+        </div>
+
+        <!-- Subforum: Zero Waste Living -->
+        <div class="subforum-row">
+            <div class="subforum-icon subforum-column center">
+                <i class="fa fa-trash-o center"></i>
+            </div>
+            <div class="subforum-description subforum-column">
+                <h4><a href="posts.html">Embracing Zero Waste</a></h4>
+                <p>Discuss and share tips on adopting a zero-waste lifestyle. Learn about reducing, reusing, and recycling for a minimal environmental footprint.</p>
+            </div>
+            <div class="subforum-stats subforum-column center">
+                <span>28 Posts | 15 Topics</span>
+            </div>
+            <div class="subforum-info subforum-column">
+                <b><a href="">Last post</a></b> by <a href="">ZeroWasteHero</a> <br>on <small>2 Feb 2022</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Forum Info -->
+    <div class="forum-info">
+        <div class="chart">
+            MyForum - Stats &nbsp;<i class="fa fa-bar-chart-o"></i>
+        </div>
+        <span><u>5,369</u> Posts in <u>48</u> Topics by <u>8,124</u> Members.</span><br>
+        <span>Latest post: <b><a href="">Eco-Friendly Home Design</a></b> on Dec 15 2021 By <a href="">GreenArchitect</a></span>.<br>
+        <span>Check <a href="">the latest posts</a> .</span><br>
+    </div>
+
+</div>
+
+
+    <!-- Footer Section -->
+    <footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Our Contact</h5>
+							<i class="icon-phone"></i> Phone: (+60) 4-3636742 <br>
+							<i class="icon-envelope-alt"></i> Email: 3rconnect@gmail.com
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span>&copy; 3RConnect 2023 All right reserved.</a>
+							</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</footer>
+
+    </div>
+
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+    <!-- javascript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster --> 
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/portfolio/jquery.quicksand.js"></script>
+    <script src="js/portfolio/setting.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.2/firebase-storage-compat.js"></script>
+
+    <script src="js/community.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+
+
+/* Style for the recycling center items */
+.recycling-center-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.recycling-center-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Title style */
+.recycling-center-item h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Address style */
+.recycling-center-item p {
+    color: #495057;
+}
+
+/* Contact info style */
+.recycling-center-item .contact-info {
+    color: #6c757d;
+}
+
+/* Separator style */
+.recycling-center-item hr {
+    margin: 15px 0;
+    border-color: #5aa3ec;
+}
+
+/* Additional info style */
+.recycling-center-item .additional-info {
+    font-style: italic;
+    color: #868e96;
+}

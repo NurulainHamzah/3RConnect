@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>3RConnect | User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    
+    <!-- css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="homepage.html"><img src="img/logo.jpg" alt="logo" style="width: 45px;"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="RcentreLocator.html">Recycle Center</a></li>
+                        <li><a href="resource_tracking.html">Resource Tracking</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+
+                        <!-- Add a subheader for Forums -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="forumsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Community <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="forumsDropdown">
+                                <a class="dropdown-item" href="forums.html">Forum</a>
+                                <a class="dropdown-item" href="posts.html">Posts</a>
+                                <a class="dropdown-item" href="details.html">Details</a>
+                            </div>
+                        </li>
+                        <!-- End of subheader for Forums -->
+
+                         <!-- Updated Dropdown Menu for Educational Resources -->
+					 <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="educationDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Educational Resources <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="educationDropdown">
+                            <a class="dropdown-item" href="article.html">Article</a>
+                            <a class="dropdown-item" href="video.html">Video</a>
+                            <a class="dropdown-item" href="infographic.html">Infographic</a>
+                        </div>
+                    </li>
+                        <li class="active"><a href="UserProfile.html"><img src="img/user profile.jpg" alt="Profile Logo" width="30" height="30"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- end header -->
+    <section id="inner-headline">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="pageTitle">User Profile</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div id="profile-info-container" class="about-logo">
+                        <!-- Display user information with profile picture -->
+                        <img src="img/avatar.png" alt="Profile Picture" width="80" height="80" class="profile-pic" id="profile-pic">
+                        <div class="profile-info">
+                            <h3>My Profile</h3>
+                            <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                            <!-- "Update Profile" button to reveal the form -->
+                            <button id="update-profile-btn" class="btn btn-default" data-toggle="modal" data-target="#updateProfileModal">Update Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center"> <!-- New column for the "Sign Out" button -->
+                    <!-- "Sign Out" button -->
+                    <button id="sign-out-btn" class="btn btn-danger mt-3">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h5 class="widgetheading">Our Contact</h5>
+                            <i class="icon-phone"></i> Phone: (+60) 04-3636742 <br>
+                            <i class="icon-envelope-alt"></i> Email: 3rconnect@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="copyright">
+                            <p>
+                                <span>&copy; 3RConnect 2023 All right reserved.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Add this modal section at the end of your body tag -->
+<div class="modal fade" id="updateProfileModal" tabindex="-1" role="dialog" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateProfileModalLabel">Update Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Update Profile Form (copied from your existing code) -->
+                <p>Update your profile information:</p>
+                <div class="alert alert-success hidden" id="contactSuccess">
+                    <strong>Success!</strong> Your profile has been updated.
+                </div>
+                <div class="alert alert-error hidden" id="contactError">
+                    <strong>Error!</strong> There was an error updating your profile.
+                </div>
+                <div class="contact-form">
+                    <form id="profile-form" role="form" novalidate="novalidate">
+                        <div class="form-group has-feedback">
+                            <label for="name">Name*</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="">
+                            <i class="fa fa-user form-control-feedback"></i>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="input-file">update image</label>
+                           </div> <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+                        <button type="button" id="update-done-btn" class="btn btn-default">Done</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script> 
+<script src="js/portfolio/jquery.quicksand.js"></script>
+<script src="js/portfolio/setting.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/animate.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/validate.js"></script>
+<!-- Include Firebase SDK scripts -->
+<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+
+<!-- Include userprofile.js and Login.js -->
+<script src="js/userprofile.js"></script>
+<script src="Login.js"></script>
+</body>
+</html>
