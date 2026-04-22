@@ -1,4 +1,4 @@
-# 🌱 3RConnect – Sustainable Community Platform
+# 🌱 3RConnect – Connecting Communities for Sustainable Living
 
 ## 📌 Overview
 3RConnect is a web-based platform designed to promote sustainable living through the principles of **Reduce, Reuse, and Recycle (3R)**.  
